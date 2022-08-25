@@ -1,0 +1,23 @@
+@media (max-width: 906px) {
+  .title-aplication {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 829px) {
+  .box-texts-descriptions {
+    width: 95%;
+  }
+  .textDescription {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 457px) {
+  .title-aplication {
+    font-size: 3rem;
+  }
+  .textDescription {
+    font-size: 1rem;
+  }
+}

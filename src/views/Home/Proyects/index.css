@@ -1,0 +1,117 @@
+.proyect-item {
+  cursor: pointer;
+  position: relative;
+  transition: all 400ms;
+  -webkit-transition: all 400ms;
+  -moz-transition: all 400ms;
+  -ms-transition: all 400ms;
+  -o-transition: all 400ms;
+  overflow: hidden;
+}
+.proyect-item:hover .hover-card-proyect-item {
+  animation: hoverCardProyect 600ms normal;
+  -webkit-animation: hoverCardProyect 600ms normal;
+}
+.hover-card-proyect-item {
+  height: 200%;
+  background: rgba(255, 255, 255, 0.363);
+  transition: all 600ms;
+  -webkit-transition: all 600ms;
+  -moz-transition: all 600ms;
+  -ms-transition: all 600ms;
+  -o-transition: all 600ms;
+  transform: translateY(100%);
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  -webkit-clip-path: polygon(0 20%, 50% 0, 100% 20%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 20%, 50% 0, 100% 20%, 100% 100%, 0% 100%);
+}
+
+@keyframes hoverCardProyect {
+  0% {
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+  }
+  50% {
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+  }
+}
+
+/* Flechas */
+.arrowDireccion {
+  transition: all 400ms;
+  -webkit-transition: all 400ms;
+  -moz-transition: all 400ms;
+  -ms-transition: all 400ms;
+  -o-transition: all 400ms;
+}
+.arrowDireccion:hover {
+  background: rgba(187, 187, 187, 0.397);
+}
+
+/*Carta de datos del proyecto*/
+
+#box-card-proyecto {
+  transition: all 500ms;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  -o-transition: all 500ms;
+  transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+}
+
+@media (max-width: 515px) {
+  .container-buttons-title-proyects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+/* Carta de descarga del proyecto */
+
+@media (max-width: 1100px) {
+  .card-proyect-download-repo {
+    display: flex;
+    flex-direction: column;
+  }
+  .container-img-repo {
+    width: 100%;
+    height: 50%;
+  }
+  .container-info-repo {
+    width: 100%;
+    height: 50%;
+  }
+}
+
+@media (max-width: 452px) {
+  .background-card-repo {
+    padding: 10px;
+  }
+  .container-buttons-repo {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,43 @@
+.contact-seccion-left {
+  height: 100%;
+  width: 60%;
+  /* background: blue; */
+}
+.contact-seccion-right {
+  height: 100%;
+  width: 40%;
+  /* background: blue; */
+}
+.card-form-contact {
+  display: flex;
+}
+
+.img-form {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://images.pexels.com/photos/2115217/pexels-photo-2115217.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+
+@media (max-width: 1000px) {
+  .contact-seccion-right {
+    display: none;
+  }
+  .contact-seccion-left {
+    width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .card-form-contact {
+    width: 95%;
+  }
+  .container-contact-seccion {
+    padding: 5px;
+  }
+  .description-form-contact {
+    font-size: 15px;
+  }
+  .title-form-contact {
+    font-size: 30px;
+  }
+}

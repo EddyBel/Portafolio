@@ -1,0 +1,37 @@
+.card-info-about {
+  background: linear-gradient(
+    to right bottom,
+    rgb(216, 216, 216),
+    #e5e7eb,
+    #fff
+  );
+}
+
+/* Responsive */
+
+@media (max-width: 950px) {
+  .container-info-about {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .container-img-about {
+    width: 100%;
+    margin: auto;
+  }
+  .container-info-about {
+    width: 100%;
+    margin: auto;
+  }
+  .card-info-about {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 415px) {
+  #img-about {
+    width: 220px;
+    height: 220px;
+  }
+}
