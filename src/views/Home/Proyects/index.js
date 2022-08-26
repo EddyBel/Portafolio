@@ -5,8 +5,8 @@ import "./index.css";
 import { ArrowLeft, ArrowRight } from "../../../components/layouts/Svg";
 import { Spin } from "../../../components/common/index";
 import { ItemProyect } from "./itemProyect";
-//hook de repositorios
-import { useRepos } from "../../../hooks/useRepos";
+// contextos
+import { useRepositorios } from "../../../hooks/contexts"
 // utils
 import { translateElement, scaleElement, timeOut, lengString } from "../../../utils/index"
 //constantes
@@ -16,8 +16,8 @@ const { color, fonts, size } = constans();
 let rotate = true;
 
 export function Proyects() {
-  //estado de repositorios
-  const { repos } = useRepos();
+  //Repositorios
+  const { repos, getIMG, getDownload } = useRepositorios()
 
   useEffect(() => {
     styleButtonsArrow();
@@ -74,9 +74,9 @@ export function Proyects() {
         ) : (
           repos.map((repo) => {
             //Definir la direccion de la imagen de portada
-            const img = `https://raw.githubusercontent.com/Eduardo619123R/${repo.name}/main/info/preview.png`;
+            const img = getIMG(repo.name)
             //Direccion de descarga
-            const download = `https://github.com/Eduardo619123R/${repo.name}/archive/refs/heads/main.zip`;
+            const download = getDownload(repo.name);
             //Filtrar el lenguaje
             const langauge = filterLanguage(repo.language);
             // Delimitar el titulo del repositorio

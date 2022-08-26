@@ -6,10 +6,14 @@ import "./styles/index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+import { ReposProvider } from './context/repositorios/reposContext'
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-    <App />
+    <ReposProvider>
+      <App />
+    </ReposProvider>
   </BrowserRouter>
 );
 
